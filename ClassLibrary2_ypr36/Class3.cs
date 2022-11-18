@@ -8,22 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassLibrary2_ypr36
-{
-    internal class Class3
-    {
-        using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClassLibrary2_ypr36
     {
         [TestFixture]//создание теста
-        public class Class2
+        public class Class3
 
 
         {
@@ -42,11 +29,9 @@ namespace ClassLibrary2_ypr36
 
                 button.Click();
 
+                IWebElement ccl = webDriver.FindElement(By.XPath("//*[@id=\"search-result\"]/li[1]/div/div[1]/div[2]/div/a"));
 
-
-                IWebElement ccl = webDriver.FindElement(By.XPath("//*[@id=\"search-result\"]/li[1]/div/div[1]/a/h2/span"));
-
-                button.Click();
+                ccl.Click();
 
             }
 
@@ -55,5 +40,3 @@ namespace ClassLibrary2_ypr36
 
     }
 
-}
-}
